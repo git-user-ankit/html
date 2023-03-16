@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transiton effects in html file</title>
+        <style>
+            body{
+                background: #191919;
+                margin-left: 370px;
+            }
+             #box{
+                /* transition-property: width,height,background,border; */
+                /* transition-duration: 2s,4s,3s,10s; 
+                 */
+                 transition-property: all;
+                 transition-duration: 2s;
+/* for taking a shorthand of transition */
+
+      /* transition:width,height,background 2s,4s,30s; */
+/* that is very shorthand */
+/* transition: all 4s; */
+transition-timing-function:linear;
+transition-delay:5s ;
+/* property
+timing
+transition-timing-function
+delay */
+/* transition: all 2s linear 1s;s */
+background-color: #f9004d;
+                width: 150px;
+                height: 150px;
+            }
+            #box:hover{
+                height: 200px;
+                border: 2px solid #ffff;
+                background-image: url(/css_for_html/protocol12.jpg) ;
+background: red;
+                width: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: #fff; ">Transition file in html</h1>
+        <div id="box"></div>
+    </body>
+</html>
