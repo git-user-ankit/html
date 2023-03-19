@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation file in css</title>
+        <style>
+            body{
+                background: black;
+            }
+            .car{
+                width: 700px;
+                height: 400px;
+                background:#191919;
+                position: relative;
+                border: 5px solid #fff;
+overflow-y: hidden;
+            }
+            .car::before{
+                content: '';
+                position: absolute;
+                /* top: -10%; */
+                /* left: -10%; */
+z-index: 10;
+                width: 100px;
+                margin: 300px;
+                height: 10px;
+                background:linear-gradient(0deg,transparent,transparent,red,yellow,blue);
+                border: 3px solid white;
+                animation: carder 1s 1ms infinite;
+                transform-origin: top left;
+z-index: 100px;
+            }
+            @keyframes carder{
+                0%{
+                    /* border: 9px solid red; */
+                transform: rotate(0deg);
+                /* position: relative; */
+                }
+                100%{
+                    /* border: 10px solid yellow; */
+                    transform: rotate(360deg);
+                    position: absolute;
+                    /* box-shadow:  2px 2px 5px 3px wheat; */
+                }
+            }
+            div p{
+                border: 3px solid green;
+                color: #fff;
+                width: 600px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="car">
+            <div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis corporis amet atque eius illo voluptates, error in dignissimos dolores dolorem. Animi, sed alias unde enim optio consequatur saepe at. <Quas class="lor">e Lorem ipsum dolor sit amet consectetur adipisicing elit. Id harum aspernatur ut tempora assumenda suscipit ratione praesentium qui optio, nam nostrum delectus magnam accusamus maiores deleniti corporis vero nobis laborum.</Quas></p></div>
+        </div>
+    </body>
+</html>
